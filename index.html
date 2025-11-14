@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Usha chicken — Chicken Shop</title>
+  <meta name="description" content="Cluck & Grill — delicious fried & grilled chicken. Order now via WhatsApp!">
+  <style>
+    /* Reset + basic layout */
+    :root{--accent:#ff6b00;--dark:#1f2937;--muted:#6b7280;--card:#ffffff}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;color:var(--dark);background:linear-gradient(180deg,#fff 0%, #fff7f2 100%)}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:76px;height:65px;border-radius:12px;background:linear-gradient(135deg,#ffb703,#fb8500);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:18px}
+    nav{display:flex;gap:18px;align-items:center}
+    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;display:inline-flex;gap:8px;align-items:center}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:18px}
+    .hero-left h1{font-size:36px;line-height:1.05}
+    .hero-left p{color:var(--muted);margin-top:10px}
+    .cta-row{margin-top:18px;display:flex;gap:12px}
+
+    /* Card */
+    .card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 6px 22px rgba(15,23,42,0.08)}
+
+    /* Menu grid */
+    .menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:20px}
+    .menu-item{display:flex;gap:12px;align-items:center}
+    .mi-thumb{width:84px;height:84px;border-radius:10px;background:#fde8d6;display:flex;align-items:center;justify-content:center;font-weight:700}
+
+    /* Gallery */
+    .gallery{display:flex;gap:10px;margin-top:18px}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:10px}
+
+    /* Floating WhatsApp */
+    .whatsapp-fab{position:fixed;right:18px;bottom:18px;background:#25D366;color:white;border-radius:999px;padding:14px 16px;box-shadow:0 10px 30px rgba(37,211,102,0.18);display:flex;align-items:center;gap:10px;font-weight:700}
+
+    /* Footer */
+    footer{margin-top:28px;padding:18px 0;color:var(--muted);font-size:14px;text-align:center}
+
+    /* Responsive */
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .hero-right{order:-1}
+    }
+
+    /* small micro-animations */
+    .pulse{animation:pulse 2s infinite}
+    @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.03)}100%{transform:scale(1)}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">usha Chicken</div>
+        <div>
+          <div style="font-weight:800">Cluck & Grill</div>
+          <div style="font-size:13px;color:var(--muted)">Fresh • Juicy • Fast</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" id="orderTopBtn">Order on WhatsApp</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <h1>Finger-licking <span style="color:var(--accent)">chicken</span>, delivered hot.</h1>
+          <p>From crispy fried to smoky grilled — handcrafted daily. Order for pickup or delivery via WhatsApp.</p>
+          <div class="cta-row">
+            <a class="btn" id="orderBtn">Order Now • WhatsApp</a>
+            <a class="card" style="display:inline-flex;align-items:center;gap:10px">⭐ 4.8 (2.3k+)</a>
+          </div>
+
+          <div class="card" style="margin-top:18px">
+            <strong>Today's special</strong>
+            <div style="display:flex;justify-content:space-between;margin-top:8px;align-items:center">
+              <div>
+                <div style="font-weight:800"></div>
+                <div style="color:var(--muted);font-size:13px;margin-top:6px"> chicken</div>
+              </div>
+              <div style="font-weight:800;color:var(--accent)">1kg +1/4(free) </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-right card pulse">
+          <div style="text-align:center;margin-bottom:12px;font-weight:700">Featured Menu</div>
+          <div class="menu">
+            <div class="menu-item">
+              <div class="mi-thumb">F</div>
+              <div>
+                <div style="font-weight:700">Chicken 1kg +1/4(free) </div>
+                <div style="font-size:13px;color:var(--muted)">230 ₨ </div>
+              </div>   
+            </div>
+            <div class="menu-item">
+              <div class="mi-thumb">G</div>
+              <div>
+                <div style="font-weight:700">Chicken joints 1kg</div>
+                <div style="font-size:13px;color:var(--muted)">250 ₨</div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="mi-thumb">W</div>
+              <div>
+                <div style="font-weight:700">Bonesless chicken</div>
+                <div style="font-size:13px;color:var(--muted)">330 ₨</div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="mi-thumb">B</div>
+              <div>
+                <div style="font-weight:700">Biryani piece 1kg +1/4(free)</div>
+                <div style="font-size:13px;color:var(--muted)">230 ₨</div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="gallery" style="margin-top:26px">
+        <h2 style="font-size:20px;margin-bottom:8px">Gallery</h2>
+        <div class="gallery card">
+          <!-- Replace src with your product images -->
+          <img src="./img/img 4.jpg" alt="crisp chicken">
+          <img src="./img/img 2.png" alt="grilled chicken">
+          <img src="./img/img 3.webp" alt="wings">
+        </div>
+      </section>
+
+      <section id="menu" style="margin-top:26px">
+        <h2 style="font-size:20px;margin-bottom:8px">Full Menu</h2>
+        <div class="card">
+          <ul style="list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">
+            <li style="padding:12px;border-bottom:1px dashed #eee"><strong> Chicken</strong><div style="color:var(--muted)">₹229</div></li>
+            <li style="padding:12px;border-bottom:1px dashed #eee"><strong>Boneless Chicken </strong><div style="color:var(--muted)">₹329</div></li>
+            <li style="padding:12px;border-bottom:1px dashed #eee"><strong>Chicken Joints</strong><div style="color:var(--muted)">₹249</div></li>
+            <li style="padding:12px;border-bottom:1px dashed #eee"><strong>Biryani piece </strong><div style="color:var(--muted)">₹229</div></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:26px">
+        <h2 style="font-size:20px;margin-bottom:8px">Contact & Location</h2>
+        <div class="card" style="display:flex;gap:18px;flex-wrap:wrap;align-items:center">
+          <div style="flex:1;min-width:260px">
+            <p style="color:var(--muted)">Opening hours: 7:00 — 23:00</p>
+            <p style="color:var(--muted)">Address: Branch- 1 : Akkayapalem <br>
+Branch- 2 : HB colony<br>
+Branch- 3 : Railway Colony<br>
+Branch- 4 : Krishna College </p>
+            <p style="margin-top:8px">Phone: <a href="tel:+919381195758">+91 9381195758</a></p>
+            <p style="margin-top:8px">Email: <a href="Kotajithink@gmail.com">Kotajithink@gmail.com</a></p>
+          </div>
+
+          <div style="min-width:260px">
+            <form id="contactForm">
+              <div style="display:flex;gap:8px;margin-bottom:8px">
+                <input required placeholder="Your name" name="name" style="flex:1;padding:10px;border-radius:8px;border:1px solid #eee">
+                <input required placeholder="Phone" name="phone" style="width:140px;padding:10px;border-radius:8px;border:1px solid #eee">
+              </div>
+              <textarea required placeholder="Message" name="message" rows="3" style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee"></textarea>
+              <div style="margin-top:8px;display:flex;gap:8px">
+                <button type="submit" class="btn">Send via WhatsApp</button>
+                <button type="button" id="mailBtn" class="card">Send Email</button>
+              </div>
+              <div id="formNote" style="margin-top:8px;color:var(--muted);font-size:13px">Form will open WhatsApp with your message</div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      © <span id="year"></span> Cluck & Grill — Crafted with ❤️ • Order on WhatsApp
+    </footer>
+  </div>
+
+  <a id="whatsappFab" class="whatsapp-fab" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">Chat on WhatsApp</a>
+
+  <script>
+    // ========== CONFIG ==========
+    // Replace this phone number with your WhatsApp phone in international format (no plus symbol)
+    // Example: India mobile: 919876543210 (country code 91 + number)
+    const WHATSAPP_PHONE = '+919381195758';
+    // Default order message
+    const ORDER_MESSAGE = encodeURIComponent('Hi! I\'d like to order from Cluck & Grill. Can you help me with menu and delivery?');
+
+    // Utility: build WhatsApp link (opens WhatsApp Web or app)
+    function buildWhatsAppUrl(phone, text){
+        // Normalize phone: remove anything that's not a digit
+        const cleanedPhone = phone ? String(phone).replace(/\D/g, '') : '';
+
+        // Normalize text: handle if caller passed already-encoded or plain text
+        let rawText = text == null ? '' : String(text);
+        try { rawText = decodeURIComponent(rawText); } catch (e) { /* not encoded, ignore */ }
+        const encoded = encodeURIComponent(rawText);
+
+        // If no phone provided, open generic WhatsApp share with text
+        if (!cleanedPhone) return `https://wa.me/?text=${encoded}`;
+
+        // Open chat to specific number (international format, digits only)
+        return `https://wa.me/${cleanedPhone}?text=${encoded}`;
+    }
+
+    // Wire up top/order buttons
+    const orderBtn = document.getElementById('orderBtn');
+    const orderTopBtn = document.getElementById('orderTopBtn');
+    const whatsappFab = document.getElementById('whatsappFab');
+
+    function openWhatsApp(text){
+      const url = buildWhatsAppUrl(WHATSAPP_PHONE, encodeURIComponent(text || ORDER_MESSAGE));
+      window.open(url, '_blank');
+    }
+
+    orderBtn.addEventListener('click', ()=>openWhatsApp());
+    orderTopBtn.addEventListener('click', ()=>openWhatsApp());
+    whatsappFab.addEventListener('click', (e)=>{ e.preventDefault(); openWhatsApp('Hello! I have a question about your menu.'); });
+
+    // Contact form — open WhatsApp prefilled with the customer's message
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const form = e.target;
+      const name = form.name.value.trim();
+      const phone = form.phone.value.trim();
+      const message = form.message.value.trim();
+      const text = `Order inquiry from website:\nName: ${name}\nPhone: ${phone}\nMessage: ${message}`;
+      openWhatsApp(text);
+    });
+
+    // Mail button fallback
+    document.getElementById('mailBtn').addEventListener('click', ()=>{
+      const subject = encodeURIComponent('Contact from website - Cluck & Grill');
+      const body = encodeURIComponent('Hello,\n\nI would like to enquire about your menu and ordering.\n\nThanks');
+      window.location.href = `mailto:Kotajithink@gmail.com?subject=${subject}&body=${body}`;
+    });
+
+    // small niceties
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Accessibility: keyboard shortcut 'w' to open WhatsApp (for quick demo)
+    document.addEventListener('keydown', (e)=>{ if(e.key.toLowerCase()==='w'){ openWhatsApp(); }});
+
+    // Replace demo images or use your own assets — recommended sizes: 1200x800
+    // DONE
+  </script>
+</body>
+</html>
